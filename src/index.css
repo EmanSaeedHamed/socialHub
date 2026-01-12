@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --font-cairo: 'Cairo Variable', sans-serif;
+    --radius-circle: 50%
+
+}
