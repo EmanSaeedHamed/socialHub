@@ -23,12 +23,13 @@ export default function SignupRightSide() {
           {/* Name Field */}
           <FormInput value={formik.values.name} type='text' name='Name' id='name' placeholder='Enter Your Name' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.name} error={formik.errors.name}/>  
           {/* Email Field */}
-          <FormInput setErrorExist={setErrorExist} errorExist={errorExist} value={formik.values.email} type='email' name='Email' id='email' placeholder='Enter Your Email' onChange={(e)=>{formik.handleChange(e); setErrorExist(null)}} onBlur={formik.handleBlur} touched={formik.touched.email} error={formik.errors.email}/>  
+          <FormInput width="w-full" setErrorExist={setErrorExist} errorExist={errorExist} value={formik.values.email} type='email' name='Email' id='email' placeholder='Enter Your Email' onChange={(e)=>{formik.handleChange(e); setErrorExist(null)}} onBlur={formik.handleBlur} touched={formik.touched.email} error={formik.errors.email}/>  
           {/* Password Field */}
-          <FormInput value={formik.values.password} type='password' name='Password' id='password' placeholder='Enter Your Password' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.password} error={formik.errors.password}/>  
+          <FormInput width="w-full" value={formik.values.password} type='password' name='Password' id='password' placeholder='Enter Your Password' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.password} error={formik.errors.password}/>  
           {/* Confirm Password Field */}
-          <FormInput value={formik.values.rePassword} type='password' name='Confirm Password' id='rePassword' placeholder='Enter Your Confirm Password' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.rePassword} error={formik.errors.rePassword}/>  
-          {/* Date of Birth Field */}
+          <FormInput width="w-full" value={formik.values.rePassword} type='password' name='Confirm Password' id='rePassword' placeholder='Enter Your Confirm Password' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.rePassword} error={formik.errors.rePassword}/>  
+          <div className="flex justify-between items-end">
+            {/* Date of Birth Field */}
           <FormInput value={formik.values.dateOfBirth} type='date' name='Date of Birth' id='dateOfBirth' placeholder='Enter Your Date of Birth' onChange={formik.handleChange} onBlur={formik.handleBlur} touched={formik.touched.dateOfBirth} error={formik.errors.dateOfBirth}/>  
 
           {/* Gender Field */}
@@ -38,13 +39,14 @@ export default function SignupRightSide() {
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
-            {formik.errors.gender && formik.touched.gender ? <p className="text-red-500">*{formik.errors.gender}</p> : ""}
+            {formik.errors.gender && formik.touched.gender ? <p className="text-red-500">*{formik.errors.gender}</p> : <p className="opacity-0">Lorem, ipsum.</p>}
+          </div>
           </div>
           {/* Sign Up Button */}
           <button
             disabled={!(formik.isValid && formik.dirty) || formik.isSubmitting}
             type="submit"
-            className="flex justify-center disabled:cursor-not-allowed disabled:bg-gray-400 cursor-pointer text-lime-200 w-full hover:bg-lime-500 bg-lime-600 hover:text-white font-bold py-3.5 rounded-xl mt-6 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="flex justify-center disabled:cursor-not-allowed disabled:bg-gray-300 cursor-pointer text-white/95 w-full hover:bg-lime-500 bg-lime-600 hover:text-white font-bold py-3.5 rounded-xl mt-6 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {
               formik.isSubmitting ?

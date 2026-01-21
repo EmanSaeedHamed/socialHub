@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function SignupNavbar() {
   return (
-    <nav className="bg-zinc-900 py-3 px-6">
+    <nav className="bg-zinc-900 py-3 px-6 fixed z-50 left-0 w-full top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* Left Side - Logo and Nav Links */}
         <div className="flex items-center gap-8">

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { useFormik } from "formik";
 
 export default function useSignup(){
-     const [errorExist , setErrorExist] = useState(null);
+  const [errorExist , setErrorExist] = useState(null);
   const navigate = useNavigate();
   const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
   const signupRegex = yup.object({

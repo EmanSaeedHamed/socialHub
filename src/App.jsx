@@ -8,13 +8,13 @@ import Login from "./pages/Login/Login";
 import AuthProvider from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import AuthRoute from "./components/AuthRoute/AuthRoute";
+import PostDetails from "./pages/PostDetails/PostDetails";
 
 const App = () => {
 	const router = createBrowserRouter([
 		{path: "/" , element:<Layout/> , children:[
       {index:true , element:<ProtectedRoute> <Home/> </ProtectedRoute>},
-      // {path:"/signup" , element:<AuthRoute><Signup/></AuthRoute>},
-      // {path:"/login" , element:<AuthRoute><Login/></AuthRoute>},
+      {path:"/post/:id" , element:<ProtectedRoute><PostDetails/></ProtectedRoute>},
       {path:"*" , element:<NotFound/>}
     ]},
     {path:"/signup" , element:<AuthRoute><Signup/></AuthRoute>},

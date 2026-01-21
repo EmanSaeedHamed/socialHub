@@ -32,7 +32,7 @@ export default function LoginRightSide() {
           <button
             disabled={!(formik.isValid && formik.dirty) || formik.isSubmitting}
             type="submit"
-            className="flex justify-center disabled:cursor-not-allowed disabled:bg-gray-400 cursor-pointer text-lime-200 w-full hover:bg-lime-500 bg-lime-600 hover:text-white font-bold py-3.5 rounded-xl mt-6 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="flex justify-center disabled:cursor-not-allowed disabled:bg-gray-300 cursor-pointer text-white/95 w-full hover:bg-lime-500 bg-lime-600 hover:text-white font-bold py-3.5 rounded-xl mt-6 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {
               formik.isSubmitting ?
